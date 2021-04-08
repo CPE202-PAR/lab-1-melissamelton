@@ -22,6 +22,11 @@ class TestLab1(unittest.TestCase):
         tList = []
         self.assertEqual(max_list_iter(tList), None)
 
+    def test_max_list_04(self) -> None:
+        # checks that entering an empty list returns None
+        tList = [20]
+        self.assertEqual(max_list_iter(tList), 20)
+
     def test_reverse_01(self) -> None:
         # checks that list is reversed
         intlist = [1,2,3]
