@@ -1,21 +1,10 @@
-# CPE 202 Lab 1a
 # Melissa Melton
+# CPE 202 - Lab 1a
 
 from typing import Optional
 from typing import List
 
-
-# Maybe_List (Optional[List]) is either
-# Python List
-# or
-# None
-
-# Maybe_integer (Optional[int]) is either
-# integer
-# or
-# None
-
-# Maybe_List -> Maybe_integer
+#Maybe_List -> Maybe_Int
 def max_list_iter(int_list: Optional[List]) -> Optional[int]:
     """finds the max of a list of numbers and returns the value (not the index)
    If int_list is empty, returns None. If list is None, raises ValueError"""

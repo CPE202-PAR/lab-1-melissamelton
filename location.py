@@ -1,5 +1,5 @@
 # Melissa Melton
-# CPE 202 Location Class, Lab 1
+# CPE 202 - Location Class, Lab 1
 
 # represents a location using name, latitude and longitude
 class Location:

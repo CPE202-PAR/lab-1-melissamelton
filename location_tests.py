@@ -1,5 +1,5 @@
 # Melissa Melton
-# CPE 202 Location Class Test Cases, Lab 1
+# CPE 202 - Location Class Test Cases, Lab 1
 
 import unittest
 from location import *
@@ -29,6 +29,7 @@ class TestLocation(unittest.TestCase):
         self.assertNotEqual(loc1, loc4)
         self.assertTrue(loc1==loc3)
         self.assertEqual(loc1, loc3)
+        self.assertFalse(loc1.__eq__(loc4))
         self.assertTrue(loc1.__eq__(loc3))
 
 if __name__ == "__main__":
