@@ -25,10 +25,12 @@ class TestLocation(unittest.TestCase):
         loc2 = Location('Brooklyn', 40.6782, 73.9440)
         loc3 = Location('Brooklyn', 40.6782, 73.9442)
         loc4 = Location('Alternative Brooklyn', 40.6782, 73.9442)
+        loc5 = [10,20]
         self.assertNotEqual(loc1, loc2)
         self.assertNotEqual(loc1, loc4)
         self.assertTrue(loc1==loc3)
         self.assertEqual(loc1, loc3)
+        self.assertFalse(loc4 == loc5)
         self.assertFalse(loc1.__eq__(loc4))
         self.assertTrue(loc1.__eq__(loc3))
 
