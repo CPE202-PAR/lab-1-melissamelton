@@ -1,32 +1,42 @@
 # CPE 202 Lab 1 Test Cases
+# Melissa Melton
 
 import unittest
 from lab1a import *
 
- # A few test cases.  Add more!!!
 class TestLab1(unittest.TestCase):
 
     def test_max_list_01(self) -> None:
+        # checks that max number is returned from list of multiple numbers
         tlist = [1,2,3]
         self.assertEqual(max_list_iter(tlist),3)
 
     def test_max_list_02(self) -> None:
+        # used to check for exception
         tlist = None
-        with self.assertRaises(ValueError):  # used to check for exception
+        with self.assertRaises(ValueError):
             max_list_iter(tlist)
 
+    def test_max_list_03(self) -> None:
+        # checks that entering an empty list returns None
+        tList = []
+        self.assertEqual(max_list_iter(tList), None)
+
     def test_reverse_01(self) -> None:
+        # checks that list is reversed
         intlist = [1,2,3]
         revlist = reverse_list(intlist)
         self.assertEqual(revlist,[3,2,1])
         self.assertEqual(intlist,[1,2,3])
 
     def test_reverse_02(self) -> None:
+        # checks that an empty list is returned if an empty list was entered
         intList = []
         revList = []
         self.assertEqual(revList, reverse_list(intList))
 
     def test_reverse_03(self) -> None:
+        # additional check for whether list is reversed. Assert true and assert equal
         intList = [8, 10, 5, 0]
         revList = [0, 5, 10, 8]
         revList2 = reverse_list(intList)
@@ -34,28 +44,35 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(revList, reverse_list(intList))
 
     def test_reverse_04(self) -> None:
+        # checks that same list of length 1 is returned if list of length 1 is entered
         intList = [901]
         revList = [901]
         self.assertEqual(reverse_list(intList), revList)
 
     def test_reverse_05(self) -> None:
+        # used to check for exception
         intList = None
-        with self.assertRaises(ValueError):  # used to check for exception
+        with self.assertRaises(ValueError):
             reverse_list(intList)
 
-    def test_reverse_mutate(self) -> None:
+    def test_reverse_mutate_01(self) -> None:
+        # checks that a list of multiple numbers is reversed
         intlist = [1,2,3]
         reverse_list_mutate(intlist)
         self.assertEqual(intlist,[3,2,1])
 
-    def test_reverse_mutate_1(self) -> None:
-        intlist = [1,2,3]
-        self.assertEqual(reverse_list_mutate(intlist), None)
-
     def test_reverse_mutate_02(self) -> None:
+        # checks that an empty list is returned if empty list is entered
+        intlist = []
+        reverse_list_mutate(intlist)
+        self.assertEqual(intlist, [])
+
+    def test_reverse_mutate_03(self) -> None:
+        # used to check for exception
         intList = None
-        with self.assertRaises(ValueError):  # used to check for exception
+        with self.assertRaises(ValueError):
             reverse_list_mutate(intList)
+
 
 if __name__ == "__main__":
         unittest.main()

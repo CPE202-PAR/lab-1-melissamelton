@@ -1,4 +1,6 @@
 # CPE 202 Lab 1a
+# Melissa Melton
+
 from typing import Optional
 from typing import List
 
@@ -46,13 +48,12 @@ def reverse_list(int_list: Optional[List]) -> Optional[List]:
 def reverse_list_mutate(int_list: Optional[List]) -> None:
    """reverses a list of numbers, modifying the input list, returns None
    If list is None, raises ValueError"""
-   modList = []
-   if int_list is None:
-       raise ValueError
-   elif len(int_list) == 0:
-       modList = []
-       return None
+   if isinstance(int_list, list):
+       if len(int_list) == 0:
+           int_list = int_list
+       elif len(int_list) > 0:
+           mod_list = [int_list[-1]] + reverse_list(int_list[:-1])
+           for i in range(len(mod_list)):
+              int_list[i] = mod_list[i]
    else:
-       modList = [int_list[-1]] + reverse_list_mutate(int_list[:-1])
-       return None
-
+       raise ValueError
