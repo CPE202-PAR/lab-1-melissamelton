@@ -19,13 +19,13 @@ class TestLab1(unittest.TestCase):
 
     def test_max_list_03(self) -> None:
         # checks that entering an empty list returns None
-        tList = []
-        self.assertEqual(max_list_iter(tList), None)
+        tlist = []
+        self.assertEqual(max_list_iter(tlist), None)
 
     def test_max_list_04(self) -> None:
         # checks that entering an empty list returns None
-        tList = [20]
-        self.assertEqual(max_list_iter(tList), 20)
+        tlist = [20]
+        self.assertEqual(max_list_iter(tlist), 20)
 
     def test_reverse_01(self) -> None:
         # checks that list is reversed
