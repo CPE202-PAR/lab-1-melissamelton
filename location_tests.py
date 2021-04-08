@@ -20,7 +20,7 @@ class TestLocation(unittest.TestCase):
         self.assertEqual(loc.lat, 30.03)
         self.assertEqual(loc.lon, 31.234)
 
-    def test_eq(self):
+    def test_eq(self) -> None:
         loc1 = Location('Brooklyn', 40.6782, 73.9442)
         loc2 = Location('Brooklyn', 40.6782, 73.9440)
         loc3 = Location('Brooklyn', 40.6782, 73.9442)
