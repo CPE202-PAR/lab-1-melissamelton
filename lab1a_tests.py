@@ -1,5 +1,5 @@
 # Melissa Melton
-# CPE 202 - Lab 1 Test Cases
+# CPE 202 Lab 1 Test Cases
 
 import unittest
 from lab1a import *

@@ -1,5 +1,5 @@
 # Melissa Melton
-# CPE 202 - Lab 1a
+# CPE 202 Lab 1a
 
 from typing import Optional
 from typing import List
