@@ -29,29 +29,29 @@ class TestLab1(unittest.TestCase):
 
     def test_reverse_01(self) -> None:
         # checks that list is reversed
-        intlist = [1,2,3]
-        revlist = reverse_list(intlist)
+        intlist: List[int] = [1,2,3]
+        revlist: List[int] = reverse_list(intlist)
         self.assertEqual(revlist,[3,2,1])
         self.assertEqual(intlist,[1,2,3])
 
     def test_reverse_02(self) -> None:
         # checks that an empty list is returned if an empty list was entered
-        intList = []
-        revList = []
+        intList: List[int] = []
+        revList: List[int] = []
         self.assertEqual(revList, reverse_list(intList))
 
     def test_reverse_03(self) -> None:
         # additional check for whether list is reversed. Assert true and assert equal
-        intList = [8, 10, 5, 0]
-        revList = [0, 5, 10, 8]
+        intList: List[int] = [8, 10, 5, 0]
+        revList: List[int] = [0, 5, 10, 8]
         revList2 = reverse_list(intList)
         self.assertTrue(revList == revList2)
         self.assertEqual(revList, reverse_list(intList))
 
     def test_reverse_04(self) -> None:
         # checks that same list of length 1 is returned if list of length 1 is entered
-        intList = [901]
-        revList = [901]
+        intList: List[int] = [901]
+        revList: List[int] = [901]
         self.assertEqual(reverse_list(intList), revList)
 
     def test_reverse_05(self) -> None:
