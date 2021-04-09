@@ -19,7 +19,7 @@ class TestLab1(unittest.TestCase):
 
     def test_max_list_03(self) -> None:
         # checks that entering an empty list returns None
-        tlist = []
+        tlist: List[int] = []
         self.assertEqual(max_list_iter(tlist), None)
 
     def test_max_list_04(self) -> None:
@@ -62,7 +62,7 @@ class TestLab1(unittest.TestCase):
 
     def test_reverse_mutate_01(self) -> None:
         # checks that a list of multiple numbers is reversed
-        intlist = [1,2,3]
+        intlist: List[int] = [1,2,3]
         reverse_list_mutate(intlist)
         self.assertEqual(intlist,[3,2,1])
 
