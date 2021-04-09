@@ -3,6 +3,7 @@
 
 import unittest
 from lab1a import *
+from typing import Any
 
 class TestLab1(unittest.TestCase):
 
