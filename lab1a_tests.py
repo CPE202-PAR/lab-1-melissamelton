@@ -30,7 +30,7 @@ class TestLab1(unittest.TestCase):
     def test_reverse_01(self) -> None:
         # checks that list is reversed
         intlist: List[int] = [1,2,3]
-        revlist: List[int] = reverse_list(intlist)
+        revlist: Optional[List[any]] = reverse_list(intlist)
         self.assertEqual(revlist,[3,2,1])
         self.assertEqual(intlist,[1,2,3])
 
@@ -68,7 +68,7 @@ class TestLab1(unittest.TestCase):
 
     def test_reverse_mutate_02(self) -> None:
         # checks that an empty list is returned if empty list is entered
-        intlist = []
+        intlist: List[int] = []
         reverse_list_mutate(intlist)
         self.assertEqual(intlist, [])
 

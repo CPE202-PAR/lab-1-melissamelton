@@ -30,8 +30,7 @@ def reverse_list(int_list: Optional[List]) -> Optional[List]:
    elif len(int_list) == 0:
       return []
    else:
-      return [int_list[-1]] + reverse_list(int_list[:-1])
-
+       return int_list[::-1]
 
 # Maybe_List -> None
 def reverse_list_mutate(int_list: Optional[List]) -> None:
@@ -41,7 +40,7 @@ def reverse_list_mutate(int_list: Optional[List]) -> None:
        if len(int_list) == 0:
            int_list = int_list
        elif len(int_list) > 0:
-           mod_list = [int_list[-1]] + reverse_list(int_list[:-1])
+           mod_list = int_list[::-1]
            for i in range(len(mod_list)):
               int_list[i] = mod_list[i]
    else:
